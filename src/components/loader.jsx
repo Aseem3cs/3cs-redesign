@@ -62,7 +62,11 @@ const Loader = ({audioAllowed, setAudioAllowed}) => {
 
     };
 
-    
+    useEffect(()=>{
+        if(soundTrack){
+            soundTrack.play();
+        }
+    },[testPlay])
 
     return (
         <div>
