@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+.empty-content-container{
+    height: 5%;
+    width: 100%;
+    background-color: #293751;
+    border: 2px solid #5a6782;
+    border-top: 0;
+    border-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Orbitron;
+    color: white;
+    flex-direction: column;
+    user-select: none;
+}
+
+.empty-content{
+    height:60%;
+    opacity: 0;
+    background-color: #4c5974;
+    width: 99%;
+    font-size: 10px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 5px 0 20px;
+    align-items: center;
+    animation: slide-up-empty-content 0.5s forwards;
+}
+
+.after-empty-content{
+    opacity: 0;
+    height: 10%;
+    background-image: linear-gradient(0deg, #818fa7, #637089);
+    width: 99%;
+    animation: slide-up-empty-content 0.5s forwards;
+}
+
+@keyframes slide-up-empty-content {
+    0%{
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    50%{
+        opacity: 1;
+        transform: translateY(50%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.empty-content-left{
+    display: flex;
+    position: relative;
+    opacity: 0;
+    animation: fade-in-empty-content 0.5s forwards;
+    animation-delay: 1.2s;
+}
+
+.empty-content-left-icon{
+    position: absolute;
+    left: -30%;
+    bottom: -60%;
+}
+
+.empty-content-right{
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+    animation: slide-right-empty-content-right 0.5s forwards;
+    animation-delay: 0.7s;
+}
+
+@keyframes slide-right-empty-content-right {
+    0%{
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    40%{
+        opacity: 1;
+        transform: translateX(-50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.empty-content-right-plus{
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    animation: blinging-plus 1.2s infinite;
+}
+
+@keyframes blinging-plus {
+    0%{
+        opacity: 0.5;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.5;
+    }
+}
+
+@keyframes fade-in-empty-content {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0.8;
+    }
+}
