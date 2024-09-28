@@ -34,7 +34,8 @@ function NavBar() {
 
   return (
     <div className='nav-bar-container'>
-      {animation ? <div className='nav-bar-main-container'>
+      {animation ? 
+      <div className='nav-bar-main-container'>
         <div className='nav-bar-logo-container'>
             <img src={Logo} alt="Company Logo" />
         </div>

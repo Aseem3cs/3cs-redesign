@@ -1,15 +1,18 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
 import Loader from './components/loader';
 import MainContent from './components/MainContent';
 import SubContent from './components/SubContent';
 import EmptyContent from './components/EmptyContent';
+import { AppContext } from './AppContext';
+
 
 function App() {
 
+  const {audioAllowed} = useContext(AppContext);
+
   const [showLoader, setShowLoader] = useState(true)
-  const [audioAllowed, setAudioAllowed] = useState(false);
   
   useEffect(()=>{
     if(audioAllowed){
@@ -23,10 +26,8 @@ function App() {
   return (
     <div className='app active'>
       {showLoader ? 
-        <Loader 
-          audioAllowed={audioAllowed}
-          setAudioAllowed={setAudioAllowed}
-        /> :
+        <Loader/> 
+        :
         <div className='app-conatiner-center'>
           <NavBar />
           <MainContent />

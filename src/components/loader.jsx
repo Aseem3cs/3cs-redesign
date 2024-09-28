@@ -1,26 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import './loader.css';
 import StartWindowBg from '../assest/enter_page_bg.jpg';
+import { AppContext } from '../AppContext';
 
-const Loader = ({audioAllowed, setAudioAllowed}) => {
+const Loader = () => {
+
+    const {
+        audioAllowed, setAudioAllowed,
+        audio, soundTrack,
+        
+    } = useContext(AppContext);
+
+
     const [glitchText, setGlitchText] = useState(false);
-    const [audio, setAudio] = useState(null);
-    const [soundTrack, setSoundTrack] = useState(null);
-
+    
     const [testPlay, setTestPlay] = useState(false);
     
     const [showBtn, setShowBtn] = useState(false);
 
     useEffect(() => {
-
-        const audioFile = new Audio('/sound/loader-effect-final.mp3');
-        audioFile.load()
-        setAudio(audioFile);
-        
-        const soundTrackFile = new Audio('/sound/sound_track_final_mix.mp3');
-        soundTrackFile.load();
-        soundTrackFile.loop = true;
-        setSoundTrack(soundTrackFile)
 
         const glitchTimeout = setTimeout(() => {
             setGlitchText(true);
@@ -31,13 +29,15 @@ const Loader = ({audioAllowed, setAudioAllowed}) => {
         }, 4500);
         setShowBtn(true);
 
-        audioFile.addEventListener('ended', () => {
-            if(soundTrack){
-                soundTrack.play();
-            }else{
-                console.log('No audio Available')
-            }
-        });
+        if (audio) {
+            audio.addEventListener('ended', () => {
+                if (soundTrack) {
+                    soundTrack.play();
+                } else {
+                    console.log('No soundTrack available');
+                }
+            });
+        }
 
         return () => {
             clearTimeout(glitchTimeout);
@@ -82,7 +82,7 @@ const Loader = ({audioAllowed, setAudioAllowed}) => {
 
                         <div className="start-window-container">
                             <div className="start-window-bg-container">
-                                <img src={StartWindowBg} alt="Background Image" />
+                                <img src={StartWindowBg} alt="Background" />
                             </div>
                             <div className="start-window-content-container">
                                 <div className='start-window-content-container-sub'>
