@@ -2,6 +2,7 @@ import React, {useEffect, useRef, useState} from 'react'
 import './NavBar.css'
 import Logo from '../assest/comapny-logo.png';
 import Gif from '../assest/test.gif'
+import HeaderBG from '../assest/home_top_banner.png'
 
 function NavBar() {
 
@@ -36,6 +37,9 @@ function NavBar() {
     <div className='nav-bar-container'>
       {animation ? 
       <div className='nav-bar-main-container'>
+        <div className='nav-bar-header-bg-container'>
+            <img src={HeaderBG} alt="Header Background" />
+        </div>
         <div className='nav-bar-logo-container'>
             <img src={Logo} alt="Company Logo" />
         </div>
@@ -46,7 +50,7 @@ function NavBar() {
                         <img src={Gif} alt="" />
                     </div>
                 </li>
-                <li className={`${listActive? 'active' : ''}`} onMouseEnter={handleMouseEnter}><p>Portfolio</p>
+                <li className={`${listActive? 'active' : ''}`} onMouseEnter={handleMouseEnter}><p>Profile</p>
                     <div className='hover-div'>
                         <img src={Gif} alt="" />
                     </div>

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
 .main-content-container{
-    height: 50%;
+    height: 38%;
     width: 100%;
     border: 2px solid #5a6782;
     position: relative;
@@ -9,18 +9,20 @@
     opacity: 0.9;
     font-family: Orbitron;
     color: white;
+    margin-bottom: 1px;
 }
 
 .main-container-top-small-box{
     position: absolute;
-    width: 99%;
-    height: 2%;
-    top: 1%;
-    left: 0.5%;
-    background-color: #5a6782;
-    box-shadow: 0px 4px #1d2a49;
+    width: 99.9%;
+    height: 1%;
+    top: 0;
+    left: 0.05%;
+    background-color: #3e5370;
+    box-shadow: 0px 2px #1d2a49;
     animation: fade-in-main 0.2s;
     animation-delay: 0.5s;
+    z-index: 100;
 }
 
 @keyframes fade-in-main{
@@ -231,6 +233,7 @@
     text-transform:uppercase;
     animation: loader-container-text-container-fade-out 0.5s forwards;
     position: relative;
+   
 }
 
 @keyframes fade-up-loader-container-text-container {

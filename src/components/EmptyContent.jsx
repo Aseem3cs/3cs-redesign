@@ -27,10 +27,10 @@ function EmptyContent() {
 
   return (
     <div className='empty-content-container'>
+      <div className='empty-content-left-icon'><FaLongArrowAltDown size={16} fill='#e5e7eb'/></div>
       <div className="empty-content">
         <div className="empty-content-left">
-            <div className='empty-content-left-icon'><FaLongArrowAltDown size={16}/></div>
-            <div>Scroll</div>    
+            <div>Scroll.Extended.Content</div>    
         </div>
         <div className="empty-content-right" onClick={handleMuteSoundTrack}>{muteText} 
           <div className='empty-content-right-plus'><FiPlus /></div>

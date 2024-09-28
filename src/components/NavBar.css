@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 
 .nav-bar-container{
@@ -61,7 +62,7 @@
 
 .nav-bar-main-container{
     color: white;
-    padding: 15px;
+    padding: 5px;
     user-select: none;
     background: #7988a5;
     position: absolute;
@@ -81,9 +82,20 @@
         opacity: 1;
     }
 }
+
+.nav-bar-header-bg-container{
+    width: 100%;
+    height: 40%;
+    margin-bottom: 5px;
+}
+
+.nav-bar-header-bg-container img{
+    width: 100%;
+    height: 100%;
+}
 .nav-bar-logo-container{
-    width: 10%;
-    margin-bottom: 10px;
+    width: 8%;
+    margin-bottom: 5px;
 }
 
 .nav-bar-logo-container img{
@@ -102,7 +114,10 @@
     justify-content: center;
     width: 100%;
     position: relative;
-    background-color: #293753;
+    background-image: url(../assest/nav_bar_bg.png);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
     flex-wrap: wrap;
 }
 
@@ -201,17 +216,25 @@
     opacity: 0;
     text-align: center;
     /* border: 1px solid white; */
-    border-top: 2px solid #040615;
+    /* border-top: 2px solid #040615;
     border-right: 1px solid #040615;
     border-left: 1px solid #040615;
-    border-bottom: 1px solid #040615;
-    padding: 5px;
-    width: calc(75%/6);
+    border-bottom: 1px solid #040615; */
+    padding: 3px;
+    width: calc(78%/6);
     cursor: pointer;
-    font-family: "Orbitron", sans-serif;
+    font-family: "Bebas Neue", sans-serif;
     position: relative;
     font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #e7f2fe;
 }
+
+.nav-bar-list-conatiner ul li:first-child{
+    width: 22%;
+}
+
 
 .nav-bar-list-conatiner ul li.active{
     opacity: 1;
@@ -285,9 +308,7 @@
     }
 }
 
-.nav-bar-list-conatiner ul li:first-child{
-    width: 24.8%;
-}
+
 
 .nav-bar-list-conatiner ul li::after{
     content: "";
@@ -304,19 +325,19 @@
 
 @keyframes lightning {
     0%{
-        background: rgba(255, 255, 255, 0.84);
+        background: rgba(255, 255, 255, 0.4);
     }
 
     25%{
         height: 20%;
-        background: rgba(255, 255, 255, 0.84);
+        background: rgba(255, 255, 255, 0.4);
         
     }
 
     100%{
         transform: translate(0%, -50%);
         height: 100%;
-        background: rgba(255, 255, 255, 0.84);
+        background: rgba(255, 255, 255, 0.4);
     }
 
     

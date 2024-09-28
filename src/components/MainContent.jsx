@@ -10,6 +10,7 @@ function MainContent() {
   const [loaderLogo, setLoaderLogo] = useState(true);
   
   const [disableAnimation, setDisableAnimation] = useState(false);
+  const [hideLoaderText, setHideLoaderText] = useState(false);
   const [startMatrixAnimation, setStartMatrixAnimation] = useState(false);
   const [afterMatrixAni, setAfterMatrixAni] = useState(false);
 
@@ -47,6 +48,7 @@ function MainContent() {
     if(disableAnimation){
       const setStartMatrixAnimationTimeOut = setTimeout(() => {
         setStartMatrixAnimation(true);
+        setHideLoaderText(true);
       }, 500);
 
       return()=>{
@@ -78,7 +80,7 @@ function MainContent() {
           loaderLogo ? 
             <div className='main-loader-icon-container'><FaCircleRadiation size={16} fill='white'/></div>
           :
-            <div className={`main-content-loader-container-text-container ${disableAnimation && 'fade-out'}`} >
+            <div className={`main-content-loader-container-text-container ${disableAnimation && 'fade-out'}`} style={{display:`${hideLoaderText && 'none'}`}}>
               <p>Loading Sub.Content</p>
               <p className='main-content-loader-container-text-container-dot dot-1'>.</p>
               <p className='main-content-loader-container-text-container-dot dot-2'>.</p>

@@ -43,7 +43,7 @@ function SubContent() {
         <div className='sub-content-main-container'>
             <div className="sub-content-container-row-1">
                 <div className="sub-content-container-row-1-content">
-                    <div className="sub-content-container-row-1-content-header header-1" style={{ backgroundColor: ` ${backgroundColorh1 ?'#606e81':'transparent' }` }}>
+                    <div className="sub-content-container-row-1-content-header header-1" style={{ backgroundColor: ` ${backgroundColorh1 ?'#46546c':'transparent' }` }}>
                         { 
                             loadHeaderText ?
                                 <div className='sub-content-container-row-1-content-header-left load'>
@@ -52,7 +52,7 @@ function SubContent() {
                                 </div> 
                             :
                                 <div className="sub-content-container-row-1-content-header-left">
-                                    <TbHexagonLetterFFilled size={18} />
+                                    <TbHexagonLetterFFilled size={15} />
                                     <div>Feature</div>
                                 </div>
                         }
@@ -112,7 +112,7 @@ function SubContent() {
                     <div className="sub-content-container-row-1-content-body body-1"></div>
                 </div>
                 <div className="sub-content-container-row-1-content">
-                    <div className="sub-content-container-row-1-content-header header-2" style={{ backgroundColor: ` ${backgroundColorh2 ?'#606e81':'transparent' }` }}> 
+                    <div className="sub-content-container-row-1-content-header header-2" style={{ backgroundColor: ` ${backgroundColorh2 ?'#46546c':'transparent' }` }}> 
                     { 
                         loadHeaderText ?
                             <div className='sub-content-container-row-1-content-header-left load'>
@@ -121,7 +121,7 @@ function SubContent() {
                             </div> 
                         :
                             <div className="sub-content-container-row-1-content-header-left">
-                                <TbHexagonLetterSFilled size={18}/>
+                                <TbHexagonLetterSFilled size={15}/>
                                 <div>Sub.Data</div>
                             </div>
                     }
@@ -182,7 +182,7 @@ function SubContent() {
                     </div>
                 </div>
                 <div className="sub-content-container-row-1-content">
-                    <div className="sub-content-container-row-1-content-header header-3" style={{ backgroundColor: ` ${backgroundColorh3 ?'#627088':'transparent' }` }}>
+                    <div className="sub-content-container-row-1-content-header header-3" style={{ backgroundColor: ` ${backgroundColorh3 ?'#46546c':'transparent' }` }}>
                         { 
                             loadHeaderText ?
                                 <div className='sub-content-container-row-1-content-header-left load'>
@@ -191,7 +191,7 @@ function SubContent() {
                                 </div> 
                             :
                                 <div className="sub-content-container-row-1-content-header-left">
-                                    <TbHexagonLetterUFilled size={18}/>
+                                    <TbHexagonLetterUFilled size={15}/>
                                     <div>Updates</div>
                                 </div>
                         }
@@ -252,7 +252,64 @@ function SubContent() {
                 </div>
             </div>
 
-            <div className="sub-content-container-row-2"></div>
+            <div className="sub-content-container-row-2">
+                <div className="sub-content-containerrow-2-before-empty-content"></div>
+                <div className="sub-content-containerrow-2-empty-content"></div>
+            </div>
+
+            <div className="sub-content-container-row-3">
+                <div className="sub-content-container-row-1-content">
+                    <div className="sub-content-container-row-1-content-header header-1" style={{ backgroundColor: ` ${backgroundColorh1 ?'#46546c':'transparent' }` }}>
+                        { 
+                            loadHeaderText ?
+                                <div className='sub-content-container-row-1-content-header-left load'>
+                                    <div className='sub-content-container-row-1-content-header-left-plus'><FiPlus /></div>
+                                    Module.Standby
+                                </div> 
+                            :
+                                <div className="sub-content-container-row-1-content-header-left">
+                                    <div>Feature</div>
+                                </div>
+                        }
+                    </div>
+                    <div className="sub-content-container-row-1-content-body body-1"></div>
+                </div>
+                <div className="sub-content-container-row-1-content">
+                    <div className="sub-content-container-row-1-content-header header-2" style={{ backgroundColor: ` ${backgroundColorh2 ?'#46546c':'transparent' }` }}> 
+                    { 
+                        loadHeaderText ?
+                            <div className='sub-content-container-row-1-content-header-left load'>
+                                <div className='sub-content-container-row-1-content-header-left-plus'><FiPlus /></div>
+                                Module.Standby
+                            </div> 
+                        :
+                            <div className="sub-content-container-row-1-content-header-left">
+                                <div>Sub.Data</div>
+                            </div>
+                    }
+                    </div>
+                    <div className="sub-content-container-row-1-content-body body-2">
+                    </div>
+                </div>
+                <div className="sub-content-container-row-1-content">
+                    <div className="sub-content-container-row-1-content-header header-3" style={{ backgroundColor: ` ${backgroundColorh3 ?'#46546c':'transparent' }` }}>
+                        { 
+                            loadHeaderText ?
+                                <div className='sub-content-container-row-1-content-header-left load'>
+                                    <div className='sub-content-container-row-1-content-header-left-plus'><FiPlus /></div>
+                                    Module.Standby
+                                </div> 
+                            :
+                                <div className="sub-content-container-row-1-content-header-left">
+                                    <div>Updates</div>
+                                </div>
+                        }
+                    </div>
+                    <div className="sub-content-container-row-1-content-body body-3"></div>
+                </div>
+            </div>
+
+            
 
             {/* <div className="sub-content-container-row-3">
                 <div className="sub-content-container-row-3-content">
